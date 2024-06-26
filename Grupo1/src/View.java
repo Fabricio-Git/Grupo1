@@ -10,6 +10,7 @@ public class View extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/poo.fxml"));
         primaryStage.setTitle("Simulador de Automação Residencial/Predial");
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
