@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerPrincipal">
+   <children>
+      <RadioButton fx:id="ButtonLampadas" layoutX="101.0" layoutY="128.0" mnemonicParsing="false" onAction="#botaoLampadasSelecionados" text="lampadas" />
+      <RadioButton fx:id="ButtonAr" layoutX="101.0" layoutY="190.0" mnemonicParsing="false" onAction="#botaoArSelecionados" text="Ar Condicionado" />
+      <RadioButton fx:id="ButtonTV" layoutX="369.0" layoutY="130.0" mnemonicParsing="false" onAction="#botaoTvSelecionados" text="TV" />
+      <RadioButton fx:id="ButtonCurtina" layoutX="373.0" layoutY="190.0" mnemonicParsing="false" onAction="#botaoCurtinaSelecionados" text="Curtina" />
+      <Button fx:id="buttonCalcular" layoutX="399.0" layoutY="284.0" mnemonicParsing="false" onAction="#botaoCalcularClicado" text="Calcular" />
+      <Button fx:id="buttonLimpar" layoutX="135.0" layoutY="284.0" mnemonicParsing="false" onAction="#botaoLimparClicado" text="Limpar" />
+      <TextField fx:id="textLampadas" layoutX="101.0" layoutY="155.0" prefHeight="24.0" prefWidth="131.0" />
+      <TextField fx:id="textAr" layoutX="101.0" layoutY="226.0" prefHeight="24.0" prefWidth="131.0" />
+      <TextField fx:id="textTV" layoutX="369.0" layoutY="157.0" prefHeight="24.0" prefWidth="131.0" />
+      <TextField fx:id="textCurtinas" layoutX="368.0" layoutY="226.0" prefHeight="24.0" prefWidth="131.0" />
+      <Label fx:id="label" layoutX="109.0" layoutY="36.0" text="Escolha os seus eletrodomesticos e as suas quantidades" />
+      <Label layoutX="81.0" layoutY="333.0" text="o seu resultado é :" />
+      <Label id="resultado" fx:id="resultado" layoutX="231.0" layoutY="333.0" text="resultado " />
+      <ComboBox fx:id="ComboBox" layoutX="92.0" layoutY="84.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
