@@ -1,12 +1,15 @@
-Autor: Fabrício Ferreira.
+# Grupo1
+Git Principal do Grupo 1 de POO
 
-Sobre o Programa: 
+### Fernanda: Líder- Gestão de tarefas e revisão.
+### Fabrício: Backend- Modelos e Controller  .
+### Guilherme: Backend- Modelos e Controller.
+### Isadora: Frontend- Interface Gráfica e view.
+### Pedro Rosa: Frontend- Interface Gráfica e view.
 
-Neste programa temos uma classe abstrata que será a base dos modelos de simulação de custos do programa.
+Link da Descrição do Projeto:
 
-A interface conta com os principais contratos sendo eles:
+https://docs.google.com/document/d/178mYw7L3AZc1yKtns0qr5ScjYvFcrb_zl9bEc-Wgljs/edit?usp=sharing
 
-Custo de instalação (CustoInstalacao).
-Manutenção (Manutencao).
-Estimativa de Custos Iniciais: (CustoEstimado).
-Economia de energia regional: (Economia).
+TESTE
+
