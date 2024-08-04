@@ -9,4 +9,4 @@
 
 ## Contribuições:
 
-# Isadora: Foi responsavel pelo desing da tela, da criação e nomeacão dos objetos da tela e arquivos fxml, utilizando o programa SceneBuilder e foi a pessoa que iniciou a criação dos controller do programa, sendo depois complementados pelo Fabricio. 
+### Isadora: Foi responsavel pelo desing da tela, da criação e nomeacão dos objetos da tela e arquivos fxml, utilizando o programa SceneBuilder e foi a pessoa que iniciou a criação dos controller do programa, sendo depois complementados pelo Fabricio. 
