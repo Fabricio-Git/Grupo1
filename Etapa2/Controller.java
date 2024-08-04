@@ -139,7 +139,7 @@ public class Controller{
 
             if (radioButtonAr.isSelected()) {
                 int quantidadeAr = Integer.parseInt(textAr.getText());
-                Dispositivos dispositivoAr = new Dispositivos("Ar Condicionado", quantidadeAr, 00f, 00f);
+                Dispositivos dispositivoAr = new Dispositivos("Ar-Condicionado", quantidadeAr, 00f, 00f);
                 dispositivos.add(dispositivoAr); 
             }
 
@@ -157,7 +157,7 @@ public class Controller{
 
             if (radioButtonCameras.isSelected()) {
                 int quantidadeCameras = Integer.parseInt(textCameras.getText());
-                Dispositivos dispositivoCameras = new Dispositivos("Cameras", quantidadeCameras, 00f, 00f);
+                Dispositivos dispositivoCameras = new Dispositivos("Câmeras", quantidadeCameras, 00f, 00f);
                 dispositivos.add(dispositivoCameras);
             }
 
@@ -175,13 +175,13 @@ public class Controller{
 
             if (radioButtonLampadas.isSelected()) {
                 int quantidadeLampadas = Integer.parseInt(textLampadas.getText());
-                Dispositivos dispositivoLampadas = new Dispositivos("Lampadas", quantidadeLampadas, 00f, 00f);
+                Dispositivos dispositivoLampadas = new Dispositivos("Lâmpadas", quantidadeLampadas, 00f, 00f);
                 dispositivos.add(dispositivoLampadas);
             }
 
             if (radioButtonSeguranca.isSelected()) {
                 int quantidadeSeguranca = Integer.parseInt(textSeguranca.getText());
-                Dispositivos dispositivoSeguranca = new Dispositivos("Segurança", quantidadeSeguranca, 00f, 00f);
+                Dispositivos dispositivoSeguranca = new Dispositivos("Sistema de Segurança", quantidadeSeguranca, 00f, 00f);
                 dispositivos.add(dispositivoSeguranca);
             }
             

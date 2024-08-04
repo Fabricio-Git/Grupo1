@@ -51,7 +51,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+            <MenuItem mnemonicParsing="false" text="God" />
           </items>
         </Menu>
       </menus>
@@ -64,28 +64,28 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <RadioButton fx:id="radioButtonLampadas" layoutX="36.0" layoutY="142.0" mnemonicParsing="false" onAction="#SelecionarLampadas" text="lampadas" />
-                              <RadioButton fx:id="radioButtonAr" layoutX="37.0" layoutY="67.0" mnemonicParsing="false" onAction="#SelecionarAr" text="Ar Condicionado" />
-                              <RadioButton fx:id="radioButtonTV" layoutX="229.0" layoutY="67.0" mnemonicParsing="false" onAction="#SelecionarTv" text="TV" />
-                              <RadioButton fx:id="radioButtonCortina" layoutX="433.0" layoutY="67.0" mnemonicParsing="false" onAction="#SelecionarCortina" text="Cortina" />
-                              <RadioButton fx:id="radioButtonIrrigacao" layoutX="436.0" layoutY="142.0" mnemonicParsing="false" onAction="#SelecionarIrrigacao" text="Irrigação" />
-                              <RadioButton fx:id="radioButtonSeguranca" layoutX="430.0" layoutY="210.0" mnemonicParsing="false" onAction="#SelecionarSeguranca" text="Segurança" />
-                              <RadioButton fx:id="radioButtonCameras" layoutX="229.0" layoutY="142.0" mnemonicParsing="false" onAction="#SelecionarCameras" text="Cameras" />
-                              <RadioButton fx:id="radioButtonSom" layoutX="229.0" layoutY="210.0" mnemonicParsing="false" onAction="#SelecionarSom" text="sistema de som" />
-                              <RadioButton fx:id="radioButtonAssistente" layoutX="34.0" layoutY="210.0" mnemonicParsing="false" onAction="#SelecionarAssistente" text="Assistente virtual" />
-                              <Button fx:id="buttonAdicionar" layoutX="316.0" layoutY="288.0" mnemonicParsing="false" onAction="#startAdicionar" text="Adicionar" />
-                              <Button fx:id="buttonLimpar" layoutX="454.0" layoutY="288.0" mnemonicParsing="false" onAction="#startLimpar" text="Limpar" />
-                              <TextField fx:id="textLampadas" layoutX="34.0" layoutY="171.0" prefHeight="24.0" prefWidth="131.0" promptText="lampadas" />
-                              <TextField fx:id="textAr" layoutX="34.0" layoutY="103.0" prefHeight="24.0" prefWidth="131.0" promptText="Ar  Condicionado" />
-                              <TextField fx:id="textTV" layoutX="227.0" layoutY="103.0" prefHeight="24.0" prefWidth="131.0" promptText="TV" />
-                              <TextField fx:id="textCurtinas" layoutX="429.0" layoutY="103.0" prefHeight="24.0" prefWidth="131.0" promptText="Cortina" />
-                              <TextField fx:id="textIrrigacao" layoutX="429.0" layoutY="171.0" prefHeight="24.0" prefWidth="131.0" promptText="Irrigação" />
-                              <TextField fx:id="textSeguranca" layoutX="429.0" layoutY="243.0" prefHeight="24.0" prefWidth="131.0" promptText="Sistema de segurança" />
-                              <TextField fx:id="textCameras" layoutX="227.0" layoutY="171.0" prefHeight="24.0" prefWidth="131.0" promptText="cameras" />
-                              <TextField fx:id="textSom" layoutX="227.0" layoutY="243.0" prefHeight="24.0" prefWidth="131.0" promptText="Sistema de som" />
-                              <TextField fx:id="textAssistente" layoutX="37.0" layoutY="243.0" prefHeight="24.0" prefWidth="131.0" promptText="Assistente virtual" />
-                              <Button fx:id="buttonGarantia" layoutX="175.0" layoutY="288.0" mnemonicParsing="false" onAction="#startGarantia" text="Garantia" />
-                              <Button fx:id="buttonCalcular" layoutX="45.0" layoutY="288.0" mnemonicParsing="false" onAction="#startCalcular" text="Calcular" />
+                              <RadioButton fx:id="radioButtonLampadas" layoutX="35.0" layoutY="140.0" mnemonicParsing="false" text="lâmpadas" />
+                              <RadioButton fx:id="radioButtonAr" layoutX="35.0" layoutY="60.0" mnemonicParsing="false" text="Ar-Condicionado" />
+                              <RadioButton fx:id="radioButtonTV" layoutX="235.0" layoutY="65.0" mnemonicParsing="false" text="TV" />
+                              <RadioButton fx:id="radioButtonCortina" layoutX="435.0" layoutY="65.0" mnemonicParsing="false" text="Cortina" />
+                              <RadioButton fx:id="radioButtonIrrigacao" layoutX="435.0" layoutY="142.0" mnemonicParsing="false" text="Irrigação" />
+                              <RadioButton fx:id="radioButtonSeguranca" layoutX="435.0" layoutY="220.0" mnemonicParsing="false" text="Sistema de Segurança" />
+                              <RadioButton fx:id="radioButtonCameras" layoutX="235.0" layoutY="142.0" mnemonicParsing="false" text="Câmeras" />
+                              <RadioButton fx:id="radioButtonSom" layoutX="235.0" layoutY="220.0" mnemonicParsing="false" text="sistema de som" />
+                              <RadioButton fx:id="radioButtonAssistente" layoutX="35.0" layoutY="220.0" mnemonicParsing="false" text="Assistente virtual" />
+                              <Button fx:id="buttonAdicionar" layoutX="350.0" layoutY="300.0" mnemonicParsing="false" onAction="#startAdicionar" text="Adicionar" />
+                              <Button fx:id="buttonLimpar" layoutX="500.0" layoutY="300.0" mnemonicParsing="false" onAction="#startLimpar" text="Limpar" />
+                              <TextField fx:id="textLampadas" layoutX="35.0" layoutY="165.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textAr" layoutX="35.0" layoutY="85.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textTV" layoutX="235.0" layoutY="85.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textCurtinas" layoutX="435.0" layoutY="85.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textIrrigacao" layoutX="435.0" layoutY="165.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textSeguranca" layoutX="435.0" layoutY="245.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textCameras" layoutX="235.0" layoutY="165.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textSom" layoutX="235.0" layoutY="245.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <TextField fx:id="textAssistente" layoutX="35.0" layoutY="245.0" prefHeight="24.0" prefWidth="131.0" promptText="Quantidade" />
+                              <Button fx:id="buttonGarantia" layoutX="200.0" layoutY="300.0" mnemonicParsing="false" onAction="#startGarantia" text="Garantia" />
+                              <Button fx:id="buttonCalcular" layoutX="50.0" layoutY="300.0" mnemonicParsing="false" onAction="#startCalcular" text="Calcular" />
                               <Label fx:id="label" layoutX="108.0" layoutY="28.0" text="Escolha os seus eletrodomesticos e as suas quantidades" />
                            </children>
                         </AnchorPane>
