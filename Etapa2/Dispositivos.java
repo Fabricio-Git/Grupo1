@@ -26,4 +26,24 @@ public class Dispositivos {
     public float getTableEconomia() {
         return tableEconomia;
     }
+
+    public void calcular(String tipo, float precoBase) {
+        switch (tipo) {
+            case "V":
+                this.tablePreço = tableUnidades * precoBase;
+                this.tableEconomia = calcularEconomia(precoBase);
+                break;
+            case "G":
+                this.tablePreço = tableUnidades * precoBase * 1.1f; // Exemplo de cálculo com garantia
+                this.tableEconomia = calcularEconomia(precoBase * 1.1f);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private float calcularEconomia(float preco) {
+        // Suponha que a economia seja uma porcentagem do preço
+        return preco * 0.1f; // 10% de economia como exemplo
+    }
 }

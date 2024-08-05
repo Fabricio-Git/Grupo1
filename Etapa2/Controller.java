@@ -1,15 +1,17 @@
+import java.util.HashMap;
+import java.util.Map;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+//import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+//import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.control.Tab;
+//import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -103,8 +105,13 @@ public class Controller{
     //Tabela
     private ObservableList<Dispositivos> dispositivos = FXCollections.observableArrayList();
 
+    // Mapa de preços base
+    private Map<String, Float> precosBase = new HashMap<>();
+
     @FXML
     public void initialize() {
+        // Inicializa a tabela de valores base
+        inicializarPrecosBase();
 
         // Inicialmente desativa todos os TextFields
         desativarTudo();
@@ -130,6 +137,18 @@ public class Controller{
         Table.setItems(dispositivos);
     }
     
+    private void inicializarPrecosBase() {
+        precosBase.put("Ar-Condicionado", 1520f);
+        precosBase.put("TV", 780f);
+        precosBase.put("Assistente Virtual", 660f);
+        precosBase.put("Câmeras", 750f);
+        precosBase.put("Cortina", 320f);
+        precosBase.put("Irrigacao", 4640f);
+        precosBase.put("Lâmpadas", 610f);
+        precosBase.put("Sistema de Segurança", 980f);
+        precosBase.put("Sistema de Som", 420f);
+    }
+
     //Botão Adicionar
     @FXML
     void startAdicionar(ActionEvent event) {
@@ -202,7 +221,8 @@ public class Controller{
     //Botões de Eventos (Calcular, Limpar, Garantia)
     @FXML
     void startCalcular(ActionEvent event) {
-
+        Dispositivos[] dpsCalcular = dispositivos.toArray(new Dispositivos[0]);
+        calcular("V", dpsCalcular);
     }
 
     @FXML
@@ -213,9 +233,21 @@ public class Controller{
 
     @FXML
     void startGarantia(ActionEvent event) {
-
+        Dispositivos[] dpsCalcular = dispositivos.toArray(new Dispositivos[0]);
+        calcular("G", dpsCalcular);
     }
     //MÉTODOS:
+
+    // Envia e chama o metodo calcular no modelo
+    private void calcular(String tipo, Dispositivos[] dpsCalcular) {
+        for (Dispositivos dispositivo : dpsCalcular) {
+            String nome = dispositivo.getTableAparelhos();
+            float precoBase = precosBase.getOrDefault(nome, 0f);
+            dispositivo.calcular(tipo, precoBase);
+        }
+        // Atualiza a tabela para mostrar os preços calculados
+        Table.refresh();
+    }
 
     // Mensagem de Erro:
     private void showAlert(String title, String message) 
