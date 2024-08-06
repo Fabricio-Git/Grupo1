@@ -62,6 +62,7 @@ A interface original foi projetada para ser bastante detalhada, permitindo ao us
       </Tab>
    </tabs>
 </TabPane>
+```
 
 ### Razões para a Simplificação
 
