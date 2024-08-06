@@ -74,7 +74,7 @@ O código original apresentava vários problemas:
 
 ## Versão Simplificada
 
-Fabrício, meu colega de equipe, simplificou a interface para torná-la mais gerenciável e eficiente. O novo código principal ficou sendo (PooView.java).
+Fabrício, meu colega de equipe, simplificou a interface para torná-la mais gerenciável e eficiente. O novo código principal ficou sendo (tela-1.fxml).
 
 ## Minhas Contribuições
 
