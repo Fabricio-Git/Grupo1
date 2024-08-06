@@ -18,6 +18,7 @@ public class PooView extends Application {
             Scene scene = new Scene(root, 640, 400);
             primaryStage.setTitle("Compra-Analise de Automações Rentaveis");
             primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
             primaryStage.show();
 
         } catch (IOException e) {

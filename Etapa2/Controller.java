@@ -240,12 +240,14 @@ public class Controller{
 
     // Envia e chama o metodo calcular no modelo
     private void calcular(String tipo, Dispositivos[] dpsCalcular) {
-        for (Dispositivos dispositivo : dpsCalcular) {
-            String nome = dispositivo.getTableAparelhos();
-            float precoBase = precosBase.getOrDefault(nome, 0f);
-            dispositivo.calcular(tipo, precoBase);
-        }
-        // Atualiza a tabela para mostrar os preços calculados
+
+            for (Dispositivos dispositivo : dpsCalcular) {
+                String nome = dispositivo.getTableAparelhos();
+                float precoBase = precosBase.getOrDefault(nome, 0f);
+                dispositivo.calcular(tipo, precoBase);
+            }
+        
+    // Atualiza a tabela para mostrar os preços calculados
         Table.refresh();
     }
 
