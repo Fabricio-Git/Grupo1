@@ -16,7 +16,7 @@ public class PooView extends Application {
 
             // Configura a cena e o palco
             Scene scene = new Scene(root, 640, 400);
-            primaryStage.setTitle("Teste");
+            primaryStage.setTitle("Compra-Analise de Automações Rentaveis");
             primaryStage.setScene(scene);
             primaryStage.show();
 
