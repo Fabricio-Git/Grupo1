@@ -10,3 +10,18 @@
 - Complemento no metodo Initialize() que foi a chamada do metodo novo inicializaPrecosBase;
 - Criaçãos dos métodos calcular() e calcularEconomia() no Modelo (Dispositivos);
 - Por fim, fiz o Controlador converter a ObservableList em uma Array e enviar pro Modelo, receber os valores e atualizar a tabela.
+## 06/08/2024 Pedro:
+## Minhas Contribuições
+### Documentação e um código que foi descartado:
+- **Documentação:** Concentrei-me em detalhar as funcionalidades da interface e a lógica por trás das interações do usuário.
+- **Descrição do Código:** O código XML descartado era responsável pela definição da interface gráfica do usuário no JavaFX. Ele incluía:
+  - Um `TabPane` com duas abas: "Aparelhos" e "Economia".
+  - A aba "Aparelhos" continha `RadioButtons` e `TextFields` para selecionar e inserir quantidades de diferentes tipos de dispositivos, além de botões para adicionar, calcular e limpar.
+  - A aba "Economia" apresentava uma `TableView` com colunas para aparelhos, preços e unidades.
+
+O objetivo do código era criar uma interface organizada para que os usuários pudessem inserir e visualizar dados relacionados aos dispositivos. Apesar do código ser descartado, a ideia era oferecer uma interface completa e interativa.
+
+## Conclusão
+
+Minha principal contribuição foi na documentação e no desenvolvimento inicial das funcionalidades para interatividade e gerenciamento da interface. O código descartado tinha como objetivo fornecer uma interface robusta e organizada, mas foi substituído por uma solução diferente.
+
