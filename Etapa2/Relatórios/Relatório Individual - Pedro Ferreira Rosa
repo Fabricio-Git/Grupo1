@@ -62,3 +62,78 @@ A interface original foi projetada para ser bastante detalhada, permitindo ao us
       </Tab>
    </tabs>
 </TabPane>
+
+### Razões para a Simplificação
+
+O código original apresentava vários problemas:
+
+1. **Complexidade Excessiva:** A estrutura detalhada era difícil de gerenciar e manter, especialmente para alguém inexperiente com JavaFX.
+2. **Performance:** A complexidade poderia impactar negativamente o desempenho da aplicação.
+3. **Usabilidade:** A interface original poderia confundir os usuários devido à quantidade de elementos e à disposição dos mesmos.
+
+## Versão Simplificada
+
+Fabrício, meu colega de equipe, simplificou a interface para torná-la mais gerenciável e eficiente. O novo código principal é o seguinte:
+
+```java
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+
+public class PooView extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            // Carrega o arquivo FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("tela-1.fxml"));
+            Parent root = loader.load();
+
+            // Configura a cena e o palco
+            Scene scene = new Scene(root, 640, 400);
+            primaryStage.setTitle("Compra-Analise de Automações Rentaveis");
+            primaryStage.setScene(scene);
+            primaryStage.setResizable(false);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+         launch(args);
+    }
+}
+
+## Minhas Contribuições
+
+### Documentação
+
+Devido à minha inexperiência com código, minha principal contribuição foi na documentação do projeto. Isso incluiu detalhar as funcionalidades da interface e a lógica por trás das interações do usuário.
+
+### Interatividade do Usuário
+
+- **Habilitar Campos:** Desenvolvi a lógica para permitir que o usuário insira a quantidade de dispositivos apenas após a seleção de um tipo específico, garantindo entradas válidas.
+- **Adicionar Dispositivos:** Implementei a funcionalidade para adicionar dispositivos à lista, permitindo uma visualização clara e organizada.
+
+### Gerenciamento de Interface
+
+- **Habilitar/Desativar Campos:** Criei métodos para associar os RadioButtons aos TextFields correspondentes, garantindo que apenas os campos relevantes fossem editáveis.
+- **Resetar Interface:** Implementei métodos para desativar todos os campos e limpar as entradas, mantendo a interface organizada e pronta para novas interações.
+
+### Tratamento de Erros
+
+- **Mostrar Alertas:** Desenvolvi um método para exibir alertas de erro e exceções ao usuário, utilizando o componente Alert do JavaFX para garantir mensagens claras e informativas.
+- **Validação de Entradas:** Implementei validações de tipo e formato de dados, assegurando que apenas entradas válidas fossem processadas e adicionadas à lista de dispositivos.
+
+### Otimizações Futuras
+
+Embora as funcionalidades básicas estejam implementadas, reconheço que há espaço para otimizações, especialmente no método `startAdicionar`. Planejo revisitar essa parte do código no futuro para melhorar a eficiência e reduzir a complexidade.
+
+## Conclusão
+
+A experiência de trabalhar no front-end deste projeto foi desafiadora devido à minha inexperiência com código, mas também foi uma oportunidade valiosa de aprendizado. A simplificação da interface realizada por Fabrício foi essencial para tornar o projeto mais gerenciável e eficiente. Minhas contribuições focaram principalmente na documentação e na lógica de interatividade do usuário, garantindo uma interface funcional e intuitiva.
