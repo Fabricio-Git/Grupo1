@@ -18,9 +18,9 @@ textField para o usuario poder colocar o numero de aparelhos que ele deseja auto
 
 Na segunda aba escolhi fazer a tabela, usando de base as tabelas utilizadas na internet em sites de comparação de eletrodomesticos
 [estilo de tabela que eu escolhi](https://escritoriocasa.com.br/melhor-tablet-custo-beneficio/) 
-//não consgui colocar uma imagem.
-Utilizei esse tipo de tabela, pois na origemdo projeto esse program seria um marketplace, portanto a tabela permite mostrar varias
-empresas diferentes o preço de seus produtos de forma clara permitindo uma facil visualização pro usuario.
+//não consgui colocar uma imagem.//
+Utilizei esse tipo de tabela, pois na origem do projeto esse programa é um marketplace, portanto a tabela permite mostrar varias
+empresas diferentes o preço de seus produtos de forma clara, permitindo uma facil visualização pro usuario.
 
 ### Na primeira etapa
 
