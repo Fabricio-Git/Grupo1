@@ -41,8 +41,9 @@ realização do rpojeto.
 
 ### Na segunda etapa
 
-Nessa etapa apenas tentei contribuir com o inicio do controller, a fim de auxiliar o Fabricio e o Guilherme na produção do programa.
-Foi complicado e cometi varios erros que foram corrigidos por meus colegas mas espero ter facilitado um pouco a vida deles.
+Nessa etapa contribui com o inicio do controller, a fim de auxiliar o Fabricio e o Guilherme na produção do programa.
+Eu e o Pedro nos unimos para construir a view do programa a fim de auxiliar a construição do projeto. Que foi corrigida pelo Fabricio
+e o Guilherme. Foi complicado e cometi varios erros que foram corrigidos por meus colegas mas espero ter facilitado um pouco a vida deles.
 
 ## Conclusão
 
