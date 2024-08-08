@@ -69,6 +69,18 @@ private void LimparTudo()
         textTV.clear();
     }
 ```
+### adicionarDispositivo:<br>
+Adiciona o item selecionado pelo Radiobutton e coloca na lista.<br>
+```
+ private void adicionarDispositivo(RadioButton radioButton, TextField textField, String nome) 
+{
+    if (radioButton.isSelected()) {
+        int quantidade = Integer.parseInt(textField.getText());
+        Dispositivos dispositivo = new Dispositivos(nome, quantidade, 00f, 00f);
+        dispositivos.add(dispositivo);
+    }
+}
+```
 ### startLimpar:<br>
 Um botão que, quando pressionado, limpa todos os campos de dados e a tabela. Este método garante que o estado atual do formulário seja removido, permitindo ao usuário começar novamente sem dados residuais.<br>
 ```
@@ -81,69 +93,21 @@ void startLimpar(ActionEvent event) {
 Quando pressionado, este botão adiciona os dispositivos selecionados e suas respectivas quantidades à lista de dispositivos. Ele também verifica se as informações fornecidas estão no formato correto, gerando uma mensagem de erro caso contrário. Isso inclui validações de tipo e formato de dados, para assegurar que somente entradas válidas sejam processadas.<br>
 ```
 void startAdicionar(ActionEvent event) {
-        try {
-            /* Verifica qual RadioButton está selecionado e processa o respectivo TextField
-            Tenho certeza que existe uma forma mais eficiente de fazer isso porem não me aventurei */
+    try
+    {
+        adicionarDispositivo(radioButtonAr, textAr, "Ar-Condicionado");
+        adicionarDispositivo(radioButtonTV, textTV, "TV");
+        adicionarDispositivo(radioButtonAssistente, textAssistente, "Assistente Virtual");
+        adicionarDispositivo(radioButtonCameras, textCameras, "Câmeras");
+        adicionarDispositivo(radioButtonCortina, textCurtinas, "Cortina");
+        adicionarDispositivo(radioButtonIrrigacao, textIrrigacao, "Irrigação");
+        adicionarDispositivo(radioButtonLampadas, textLampadas, "Lâmpadas");
+        adicionarDispositivo(radioButtonSom, textSom, "Sistema de Som");
+        adicionarDispositivo(radioButtonSeguranca, textSeguranca, "Sistema de Segurança");
 
-            if (radioButtonAr.isSelected()) {
-                int quantidadeAr = Integer.parseInt(textAr.getText());
-                Dispositivos dispositivoAr = new Dispositivos("Ar-Condicionado", quantidadeAr, 00f, 00f);
-                dispositivos.add(dispositivoAr); 
-            }
-
-            if (radioButtonTV.isSelected()) {
-                int quantidadeTV = Integer.parseInt(textTV.getText());
-                Dispositivos dispositivoTv = new Dispositivos("TV", quantidadeTV, 00f, 00f);
-                dispositivos.add(dispositivoTv);
-            }
-
-            if (radioButtonAssistente.isSelected()) {
-                int quantidadeAssistente = Integer.parseInt(textAssistente.getText());
-                Dispositivos dispositivoAssistente = new Dispositivos("Assistente Virtual", quantidadeAssistente, 00f, 00f);
-                dispositivos.add(dispositivoAssistente);
-            }
-
-            if (radioButtonCameras.isSelected()) {
-                int quantidadeCameras = Integer.parseInt(textCameras.getText());
-                Dispositivos dispositivoCameras = new Dispositivos("Câmeras", quantidadeCameras, 00f, 00f);
-                dispositivos.add(dispositivoCameras);
-            }
-
-            if (radioButtonCortina.isSelected()) {
-                int quantidadeCortina = Integer.parseInt(textCurtinas.getText());
-                Dispositivos dispositivoCortina = new Dispositivos("Cortina", quantidadeCortina, 00f, 00f);
-                dispositivos.add(dispositivoCortina);
-            }
-            
-            if (radioButtonIrrigacao.isSelected()) {
-                int quantidadeIrrigacao = Integer.parseInt(textIrrigacao.getText());
-                Dispositivos dispositivoIrrigacao = new Dispositivos("Irrigacao", quantidadeIrrigacao, 00f, 00f);
-                dispositivos.add(dispositivoIrrigacao);
-            }
-
-            if (radioButtonLampadas.isSelected()) {
-                int quantidadeLampadas = Integer.parseInt(textLampadas.getText());
-                Dispositivos dispositivoLampadas = new Dispositivos("Lâmpadas", quantidadeLampadas, 00f, 00f);
-                dispositivos.add(dispositivoLampadas);
-            }
-
-            if (radioButtonSeguranca.isSelected()) {
-                int quantidadeSeguranca = Integer.parseInt(textSeguranca.getText());
-                Dispositivos dispositivoSeguranca = new Dispositivos("Sistema de Segurança", quantidadeSeguranca, 00f, 00f);
-                dispositivos.add(dispositivoSeguranca);
-            }
-            
-            if (radioButtonSom.isSelected()) {
-                int quantidadeSom = Integer.parseInt(textSom.getText());
-                Dispositivos dispositivoSom = new Dispositivos("Sistema de Som", quantidadeSom, 00f, 00f);
-                dispositivos.add(dispositivoSom);
-            }        
-        } 
-
-        //Mensagem de erro se o texto não for um número válido
-        catch (NumberFormatException e) {
-            showAlert("Erro", "Por favor, insira um número Inteiro.");
-        }
+    } catch (NumberFormatException e) 
+    {
+        showAlert("Erro", "Por favor, insira um número Inteiro.");
     }
+}
 ```
-> Nota: Estou ciente de que existe uma maneira mais eficiente de implementar o método startAdicionar, mas devido ao tempo disponível, não consegui otimizá-lo. Planejo revisitar essa parte do código para melhorar a eficiência e reduzir a complexidade futuramente.
