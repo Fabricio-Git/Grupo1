@@ -5,19 +5,19 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-//import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-//import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-//import javafx.scene.control.Tab;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.collections.ObservableList;
-
+/* Durante a análise do código, identificamos a possibilidade de uma refatoração que poderia melhorar a 
+organização sendo ela dividir o controller em dois. */
 public class Controller{
     /*Todos os métodos estão no final*/
 
@@ -74,7 +74,7 @@ public class Controller{
 
     @FXML    
     private TableColumn<Dispositivos, Integer> TableUnidades;
-
+    
     @FXML
     private TextField textAr;
 
@@ -135,88 +135,52 @@ public class Controller{
 
         // (TABELA, adiciona os dispositivos na tabela)
         Table.setItems(dispositivos);
+
     }
     
     private void inicializarPrecosBase() {
-        precosBase.put("Ar-Condicionado", 1520f);
-        precosBase.put("TV", 780f);
-        precosBase.put("Assistente Virtual", 660f);
-        precosBase.put("Câmeras", 750f);
+        precosBase.put("Ar-Condicionado", 700f);
+        precosBase.put("TV", 120f);
+        precosBase.put("Assistente Virtual", 300f);
+        precosBase.put("Câmeras", 450f);
         precosBase.put("Cortina", 320f);
-        precosBase.put("Irrigacao", 4640f);
-        precosBase.put("Lâmpadas", 610f);
-        precosBase.put("Sistema de Segurança", 980f);
+        precosBase.put("Irrigacao", 1400f);
+        precosBase.put("Lâmpadas", 100f);
+        precosBase.put("Sistema de Segurança", 2500f);
         precosBase.put("Sistema de Som", 420f);
     }
 
     //Botão Adicionar
     @FXML
     void startAdicionar(ActionEvent event) {
-        try {
-            /* Verifica qual RadioButton está selecionado e processa o respectivo TextField
-            Tenho certeza que existe uma forma mais eficiente de fazer isso porem não me aventurei */
+        try
+        {
+            adicionarDispositivo(radioButtonAr, textAr, "Ar-Condicionado");
+            adicionarDispositivo(radioButtonTV, textTV, "TV");
+            adicionarDispositivo(radioButtonAssistente, textAssistente, "Assistente Virtual");
+            adicionarDispositivo(radioButtonCameras, textCameras, "Câmeras");
+            adicionarDispositivo(radioButtonCortina, textCurtinas, "Cortina");
+            adicionarDispositivo(radioButtonIrrigacao, textIrrigacao, "Irrigação");
+            adicionarDispositivo(radioButtonLampadas, textLampadas, "Lâmpadas");
+            adicionarDispositivo(radioButtonSom, textSom, "Sistema de Som");
+            adicionarDispositivo(radioButtonSeguranca, textSeguranca, "Sistema de Segurança");
 
-            if (radioButtonAr.isSelected()) {
-                int quantidadeAr = Integer.parseInt(textAr.getText());
-                Dispositivos dispositivoAr = new Dispositivos("Ar-Condicionado", quantidadeAr, 00f, 00f);
-                dispositivos.add(dispositivoAr); 
-            }
-
-            if (radioButtonTV.isSelected()) {
-                int quantidadeTV = Integer.parseInt(textTV.getText());
-                Dispositivos dispositivoTv = new Dispositivos("TV", quantidadeTV, 00f, 00f);
-                dispositivos.add(dispositivoTv);
-            }
-
-            if (radioButtonAssistente.isSelected()) {
-                int quantidadeAssistente = Integer.parseInt(textAssistente.getText());
-                Dispositivos dispositivoAssistente = new Dispositivos("Assistente Virtual", quantidadeAssistente, 00f, 00f);
-                dispositivos.add(dispositivoAssistente);
-            }
-
-            if (radioButtonCameras.isSelected()) {
-                int quantidadeCameras = Integer.parseInt(textCameras.getText());
-                Dispositivos dispositivoCameras = new Dispositivos("Câmeras", quantidadeCameras, 00f, 00f);
-                dispositivos.add(dispositivoCameras);
-            }
-
-            if (radioButtonCortina.isSelected()) {
-                int quantidadeCortina = Integer.parseInt(textCurtinas.getText());
-                Dispositivos dispositivoCortina = new Dispositivos("Cortina", quantidadeCortina, 00f, 00f);
-                dispositivos.add(dispositivoCortina);
-            }
-            
-            if (radioButtonIrrigacao.isSelected()) {
-                int quantidadeIrrigacao = Integer.parseInt(textIrrigacao.getText());
-                Dispositivos dispositivoIrrigacao = new Dispositivos("Irrigacao", quantidadeIrrigacao, 00f, 00f);
-                dispositivos.add(dispositivoIrrigacao);
-            }
-
-            if (radioButtonLampadas.isSelected()) {
-                int quantidadeLampadas = Integer.parseInt(textLampadas.getText());
-                Dispositivos dispositivoLampadas = new Dispositivos("Lâmpadas", quantidadeLampadas, 00f, 00f);
-                dispositivos.add(dispositivoLampadas);
-            }
-
-            if (radioButtonSeguranca.isSelected()) {
-                int quantidadeSeguranca = Integer.parseInt(textSeguranca.getText());
-                Dispositivos dispositivoSeguranca = new Dispositivos("Sistema de Segurança", quantidadeSeguranca, 00f, 00f);
-                dispositivos.add(dispositivoSeguranca);
-            }
-            
-            if (radioButtonSom.isSelected()) {
-                int quantidadeSom = Integer.parseInt(textSom.getText());
-                Dispositivos dispositivoSom = new Dispositivos("Sistema de Som", quantidadeSom, 00f, 00f);
-                dispositivos.add(dispositivoSom);
-            }        
-        } 
-
-        //Mensagem de erro se o texto não for um número válido
-        catch (NumberFormatException e) {
-            showAlert("Erro", "Por favor, insira um número Inteiro.");
-        }
+    } catch (NumberFormatException e) 
+    {
+        showAlert("Erro", "Por favor, insira um número Inteiro.");
     }
 
+    }
+
+    //Verifica se o Radiobutton está ligado e adiciona na lista.
+    private void adicionarDispositivo(RadioButton radioButton, TextField textField, String nome) 
+    {
+        if (radioButton.isSelected()) {
+            int quantidade = Integer.parseInt(textField.getText());
+            Dispositivos dispositivo = new Dispositivos(nome, quantidade, 00f, 00f);
+            dispositivos.add(dispositivo);
+        }
+    }
 
     //Botões de Eventos (Calcular, Limpar, Garantia)
     @FXML

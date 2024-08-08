@@ -44,6 +44,6 @@ public class Dispositivos {
 
     private float calcularEconomia(float preco) {
         // Suponha que a economia seja uma porcentagem do preço
-        return preco * 0.1f; // 10% de economia como exemplo
+        return preco * 0.05f; // 5% de economia como exemplo
     }
 }
